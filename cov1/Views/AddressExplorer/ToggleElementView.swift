@@ -18,7 +18,7 @@ struct ToggleElementView: View {
                 .font(.caption)
                 .fontWeight(.bold)
                 .foregroundColor(viewModel.textColor)
-                .frame(minWidth: 0, maxWidth: .infinity)
+                //.frame(minWidth: 0, maxWidth: .infinity)
                 .padding(6)
         }
         .background(

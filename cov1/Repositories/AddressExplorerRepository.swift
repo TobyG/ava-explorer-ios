@@ -43,7 +43,7 @@ class HttpAddressExplorerRepository: BaseAddressExplorerRepository, AddressExplo
     
     func loadData(address: String) {
         
-        let user = "ckey_9c452a7934804b94832c422686f"
+        let user = "onemillionwallets"
         let url = "https://api.covalenthq.com/v1/43114/address/" + address + "/balances_v2/?nft=true"
         let headers: HTTPHeaders = [.authorization(username: user, password: "")]
                 
@@ -57,7 +57,7 @@ class HttpAddressExplorerRepository: BaseAddressExplorerRepository, AddressExplo
     }
     
     func loadTransactions(address: String) {
-        let user = "ckey_9c452a7934804b94832c422686f"
+        let user = "onemillionwallets"
         let url = "https://api.covalenthq.com/v1/43114/address/" + address + "/transactions_v2/"
         let headers: HTTPHeaders = [.authorization(username: user, password: "")]
                 
