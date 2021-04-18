@@ -1,0 +1,30 @@
+PODS:
+  - Alamofire (5.4.1)
+  - Kingfisher/Core (5.15.3)
+  - Kingfisher/SwiftUI (5.15.3):
+    - Kingfisher/Core
+  - Resolver (1.1.4)
+  - SwiftGen (6.4.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - Kingfisher/SwiftUI
+  - Resolver
+  - SwiftGen
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Kingfisher
+    - Resolver
+    - SwiftGen
+
+SPEC CHECKSUMS:
+  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  Kingfisher: 2fef2f4d9e809285aff7f6195b5290520904f3fa
+  Resolver: 1f4c046255cbadfa97094692e16e940d4329779f
+  SwiftGen: 67860cc7c3cfc2ed25b9b74cfd55495fc89f9108
+
+PODFILE CHECKSUM: 3c0cf0c9db241bba335e61fee3f939b60b038fc9
+
+COCOAPODS: 1.10.0
