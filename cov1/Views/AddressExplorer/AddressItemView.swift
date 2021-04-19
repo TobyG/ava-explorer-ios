@@ -2,7 +2,7 @@
 //  AddressItemView.swift
 //  cov1
 //
-//  Created by Tobias Pechatschek on 03.04.21.
+//  Created by Tobias P on 03.04.21.
 //
 
 import SwiftUI

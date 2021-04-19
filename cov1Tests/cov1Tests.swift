@@ -2,7 +2,7 @@
 //  cov1Tests.swift
 //  cov1Tests
 //
-//  Created by Tobias Pechatschek on 03.04.21.
+//  Created by Tobias P on 03.04.21.
 //
 
 import XCTest

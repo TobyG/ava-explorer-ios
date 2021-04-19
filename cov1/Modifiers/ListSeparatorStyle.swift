@@ -2,7 +2,7 @@
 //  ListSeparatorStyle.swift
 //  cov1
 //
-//  Created by Tobias Pechatschek on 05.04.21.
+//  Created by Tobias P on 05.04.21.
 //
 
 import Foundation
