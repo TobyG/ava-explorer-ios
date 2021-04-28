@@ -9,7 +9,6 @@ target 'cov1' do
   pod 'Resolver'
   pod 'Kingfisher/SwiftUI'
   pod 'Alamofire'
-  pod 'SwiftGen'
 
 
   target 'cov1Tests' do

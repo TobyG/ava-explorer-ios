@@ -20,7 +20,7 @@ struct ContentView: View {
                     Label("NFTs", systemImage: "hexagon")
                 }
             
-           TransactionExplorerView()
+            TransactionExplorerView()
                 .tabItem {
                     Label("Transactions", systemImage: "arrow.up.arrow.down.circle")
                 }
@@ -30,13 +30,9 @@ struct ContentView: View {
                     Label("Profile", systemImage: "person.circle")
                 }
             
-            /*OrderView()
-             .tabItem {
-             Label("Order", systemImage: "square.and.pencil")
-             }*/
         }.accentColor(Color("AvaRed")).onAppear() {
             UITabBar.appearance().barTintColor = .white
-            }
+        }
         
     }
 }

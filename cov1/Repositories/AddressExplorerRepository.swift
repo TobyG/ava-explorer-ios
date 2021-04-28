@@ -17,6 +17,7 @@ class BaseAddressExplorerRepository {
     @Published var transactionData: TransactionData = TransactionData(address: "", updated_at: "", next_update_at: "", quote_currency: "", chain_id: 0, items: [])
     
     @Published var address: String = ""
+    @Published var didSelectMainNet: Bool = true
 }
 
 protocol AddressExplorerRepository: BaseAddressExplorerRepository {
@@ -24,6 +25,8 @@ protocol AddressExplorerRepository: BaseAddressExplorerRepository {
     
     func changeAddress(address: String)
     func getAddress()
+    func getDidSelectMainNet()
+    func changeNet(_ val: Bool)
 }
 
 
@@ -43,13 +46,16 @@ class HttpAddressExplorerRepository: BaseAddressExplorerRepository, AddressExplo
     
     func loadData(address: String) {
         
+        print("load data")
+        
         let user = "onemillionwallets"
         let url = "https://api.covalenthq.com/v1/43114/address/" + address + "/balances_v2/?nft=true"
         let headers: HTTPHeaders = [.authorization(username: user, password: "")]
                 
         AF.request(url, headers: headers)
             .responseDecodable(of: AddressBalanceResponse.self) { response in
-
+                print(response)
+                print(response.value)
                 guard let res = response.value else { return }
                 self.addressBalanceResponse = res
             }
@@ -76,9 +82,19 @@ class HttpAddressExplorerRepository: BaseAddressExplorerRepository, AddressExplo
     }
     
     func getAddress() {
-        address = defaults.string(forKey: "address") ?? ""
+        self.getDidSelectMainNet()
+        address = defaults.string(forKey: "address") ?? "click to change address"
         self.loadData(address: address)
         self.loadTransactions(address: address)
+    }
+    
+    func getDidSelectMainNet() {
+        didSelectMainNet = defaults.bool(forKey: "didSelectMainNet")
+    }
+    
+    func changeNet(_ val: Bool) {
+        defaults.set(val, forKey: "didSelectMainNet")
+        self.didSelectMainNet = val
     }
     
     

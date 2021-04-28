@@ -12,20 +12,26 @@ import Combine
 class ProfileViewModel: ObservableObject {
 
     @Published var addressExplorerRepository: AddressExplorerRepository = Resolver.resolve()
-
     @Published var address: String = ""
+    @Published var didSelectMainNet: Bool = true
     
     private var cancellables = Set<AnyCancellable>()
 
-    
     init() {
-       print("init")
         addressExplorerRepository.$address.sink(receiveValue: { value in
             self.address = value
            
         }).store(in: &cancellables)
         
-
-
+        addressExplorerRepository.$didSelectMainNet.sink(receiveValue: { value in
+            self.didSelectMainNet = value
+           
+        }).store(in: &cancellables)
+        
     }
+    
+    func toggleNet(_ val: Bool) {
+        addressExplorerRepository.changeNet(val)
+    }
+    
 }

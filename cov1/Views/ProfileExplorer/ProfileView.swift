@@ -19,11 +19,13 @@ struct ProfileView: View {
             
             VStack {
                 
-                Text("Address:")
-                    .font(.caption)
+                Text("Address:").smallText()
                     .foregroundColor(Color.gray)
                 
                 AddressButton
+                
+                Text("Network:").smallText()
+                    .foregroundColor(Color.gray)
                 HStack {
                     Mainnet
                     Testnet
@@ -44,28 +46,34 @@ private extension ProfileView {
     
     var Mainnet: some View {
         
-        Text("Main net")
-            .font(.caption)
-            .fontWeight(.bold)
-            .foregroundColor(.white)
-            .frame(minWidth: 0, maxWidth: .infinity)
-            .padding(6)
-            .background(
-                Capsule().foregroundColor(Color("AvaRed"))
-            ).padding()
+       
+        
+        Button(action: {
+            viewModel.toggleNet(true)
+        }) {
+            Text("Main net")
+                .mediumText().foregroundColor(viewModel.didSelectMainNet ? .white : Color("AvaPurple"))
+                .frame(minWidth: 0, maxWidth: .infinity)
+                .padding(6)
+                .background(
+                    Capsule().foregroundColor(viewModel.didSelectMainNet ? Color("AvaRed") : Color("AvaGray"))
+                )
+        }.padding()
     }
     
     var Testnet: some View {
         
-        Text("Test net")
-            .font(.caption)
-            .fontWeight(.bold)
-            .foregroundColor(.white)
-            .frame(minWidth: 0, maxWidth: .infinity)
-            .padding(6)
-            .background(
-                Capsule().foregroundColor(Color("AvaRed"))
-            ).padding()
+        Button(action: {
+            viewModel.toggleNet(false)
+        }) {
+            Text("Test net")
+                .mediumText().foregroundColor(viewModel.didSelectMainNet ? Color("AvaPurple") : .white)
+                .frame(minWidth: 0, maxWidth: .infinity)
+                .padding(6)
+                .background(
+                    Capsule().foregroundColor(viewModel.didSelectMainNet ? Color("AvaGray") : Color("AvaRed"))
+                )
+        }.padding()
     }
     
     var AddressButton: some View {
@@ -73,9 +81,9 @@ private extension ProfileView {
             Button(action: {
                 isPresented.toggle()
             }) {
-                Image(systemName: "pencil").foregroundColor(.white)
-                Text(viewModel.address)
-            }
+                // Image(systemName: "pencil")
+                Text(viewModel.address).mediumText().foregroundColor(Color("AvaRed"))
+            }.padding()
         
     }
     
