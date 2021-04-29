@@ -11,7 +11,7 @@ import Combine
 
 class AddressModalViewModel: ObservableObject {
 
-    @Published var addressExplorerRepository: AddressExplorerRepository = Resolver.resolve()
+    @Published var addressExplorerRepository: DataRepository = Resolver.resolve()
 
     @Published var address: String = ""
     

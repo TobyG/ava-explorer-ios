@@ -22,11 +22,10 @@ struct AddressItem: Decodable {
     var quote: Float
     var nft_data: [NftData]?
     
-    var balanceComma: String {
+    var balanceComma: Float {
         //let bal: Double = (balance as NSString).doubleValue
-        //let po: Double = Double(pow(10, contract_decimals))
-        var bal = balance
+        let power: Float = Float(truncating: pow(10, contract_decimals) as NSNumber)
         //bal.insert(".", at: balance.index(0, offsetBy: (balance.count - contract_decimals)))
-        return bal
+        return Float(balance)! / power
     }
 }

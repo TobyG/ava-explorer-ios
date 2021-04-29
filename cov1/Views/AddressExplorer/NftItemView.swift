@@ -49,7 +49,7 @@ struct NftItemView: View {
                      
                 }
             }.padding()
-        }.roundFont()
+        }
         
     }
 }

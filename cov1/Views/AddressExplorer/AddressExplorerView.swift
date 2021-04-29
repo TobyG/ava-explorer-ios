@@ -15,9 +15,16 @@ struct AddressExplorerView: View {
         NavigationView{
             VStack {
                 TitleView(title: "Tokens", subtitle: "Avalanche C-Chain")
+                TypeFilters.padding(.leading).padding(.top, 2)
+
+                if (viewModel.isLoading) {
+                    ProgressView()
+                }
+                else {
+                    
+                }
                 ScrollView {
                     
-                    TypeFilters.padding(.leading).padding(.top, 2)
                     TokenList
                     
                 }
@@ -44,7 +51,6 @@ private extension AddressExplorerView {
     
     var TokenList: some View {
         LazyVStack {
-            /*ForEach(0..<viewModel.filteredAddressItems.count, id: \.self) { index in*/
             ForEach(0..<viewModel.filteredAddressItems.count, id: \.self) { index in
                 AddressItemView(addressItem: viewModel.filteredAddressItems[index])
             }

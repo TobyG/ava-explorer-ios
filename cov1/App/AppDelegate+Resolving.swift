@@ -11,6 +11,6 @@ import Resolver
 extension Resolver: ResolverRegistering {
   public static func registerAllServices() {
     //register { TestDataAddressExplorerRepository() as AddressExplorerRepository }.scope(application)
-    register { HttpAddressExplorerRepository() as AddressExplorerRepository }.scope(application)
+    register { HttpAddressExplorerRepository() as DataRepository }.scope(application)
   }
 }

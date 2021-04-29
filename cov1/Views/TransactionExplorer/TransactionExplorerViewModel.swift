@@ -10,7 +10,7 @@ import Resolver
 
 class TransactionExplorerViewModel: ObservableObject {
 
-    @Published var addressExplorerRepository: AddressExplorerRepository = Resolver.resolve()
+    @Published var addressExplorerRepository: DataRepository = Resolver.resolve()
     @Published var transactions = [Transaction]()
 
     private var cancellables = Set<AnyCancellable>()

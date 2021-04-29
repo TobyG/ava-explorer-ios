@@ -21,6 +21,7 @@
 		F62BA039261F2B93007E8AD7 /* TransactionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62BA038261F2B93007E8AD7 /* TransactionData.swift */; };
 		F62BA03E261F3C11007E8AD7 /* TransactionItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62BA03D261F3C11007E8AD7 /* TransactionItemView.swift */; };
 		F62BA046261F459D007E8AD7 /* TransactionExplorerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62BA045261F459D007E8AD7 /* TransactionExplorerViewModel.swift */; };
+		F648C0242639F33000890A42 /* MediumTextRegular.swift in Sources */ = {isa = PBXBuildFile; fileRef = F648C0232639F33000890A42 /* MediumTextRegular.swift */; };
 		F655072B263821FA00EC0BC4 /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F655072A263821F900EC0BC4 /* Rubik-Medium.ttf */; };
 		F655072F263822B400EC0BC4 /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F655072A263821F900EC0BC4 /* Rubik-Medium.ttf */; };
 		F6550733263822B400EC0BC4 /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F655072A263821F900EC0BC4 /* Rubik-Medium.ttf */; };
@@ -34,14 +35,12 @@
 		F691301D26381C9900F8E22D /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F691301826381C4100F8E22D /* Rubik-Regular.ttf */; };
 		F6BAE1E92618A74B00BEC167 /* AddressItemImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BAE1E82618A74B00BEC167 /* AddressItemImage.swift */; };
 		F6BAE2142619A54900BEC167 /* AddressBalanceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BAE2132619A54800BEC167 /* AddressBalanceResponse.swift */; };
-		F6BAE21E2619BC4200BEC167 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BAE21D2619BC4200BEC167 /* NetworkClient.swift */; };
 		F6BAE2232619BCFC00BEC167 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BAE2222619BCFC00BEC167 /* Constants.swift */; };
 		F6BAE228261A508D00BEC167 /* ToggleElementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BAE227261A508D00BEC167 /* ToggleElementView.swift */; };
 		F6BAE22D261A50DF00BEC167 /* ToggleElementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BAE22C261A50DF00BEC167 /* ToggleElementViewModel.swift */; };
 		F6BAE232261A514F00BEC167 /* ToggleElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BAE231261A514F00BEC167 /* ToggleElement.swift */; };
 		F6BAE237261A54E400BEC167 /* AddressItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BAE236261A54E400BEC167 /* AddressItemType.swift */; };
 		F6BAE242261B1A1800BEC167 /* ListSeparatorStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BAE241261B1A1800BEC167 /* ListSeparatorStyle.swift */; };
-		F6BAE251261B7A7C00BEC167 /* RoundText.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BAE250261B7A7C00BEC167 /* RoundText.swift */; };
 		F6BAE25E261C6E7500BEC167 /* NftData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BAE25D261C6E7500BEC167 /* NftData.swift */; };
 		F6BAE263261C730B00BEC167 /* NftExtData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BAE262261C730A00BEC167 /* NftExtData.swift */; };
 		F6BAE270261C7E1D00BEC167 /* NftItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BAE26F261C7E1D00BEC167 /* NftItemView.swift */; };
@@ -55,8 +54,7 @@
 		F6C08A4E26187C4700EF0312 /* AddressItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C08A4D26187C4700EF0312 /* AddressItem.swift */; };
 		F6C08A5626187D0A00EF0312 /* AddressBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C08A5526187D0A00EF0312 /* AddressBalance.swift */; };
 		F6C08A5B2618899600EF0312 /* AddressItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C08A5A2618899600EF0312 /* AddressItemView.swift */; };
-		F6C08A60261895BE00EF0312 /* AddressExplorerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C08A5F261895BE00EF0312 /* AddressExplorerRepository.swift */; };
-		F6C08A652618962600EF0312 /* MockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C08A642618962600EF0312 /* MockModel.swift */; };
+		F6C08A60261895BE00EF0312 /* DataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C08A5F261895BE00EF0312 /* DataRepository.swift */; };
 		F6C08A6B2618973500EF0312 /* AddressExplorerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C08A6A2618973500EF0312 /* AddressExplorerViewModel.swift */; };
 		F6C08A802618A25E00EF0312 /* AppDelegate+Resolving.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C08A7F2618A25E00EF0312 /* AppDelegate+Resolving.swift */; };
 /* End PBXBuildFile section */
@@ -99,6 +97,7 @@
 		F62BA038261F2B93007E8AD7 /* TransactionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionData.swift; sourceTree = "<group>"; };
 		F62BA03D261F3C11007E8AD7 /* TransactionItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionItemView.swift; sourceTree = "<group>"; };
 		F62BA045261F459D007E8AD7 /* TransactionExplorerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionExplorerViewModel.swift; sourceTree = "<group>"; };
+		F648C0232639F33000890A42 /* MediumTextRegular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumTextRegular.swift; sourceTree = "<group>"; };
 		F655072A263821F900EC0BC4 /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
 		F655073F26385B2100EC0BC4 /* LargeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeText.swift; sourceTree = "<group>"; };
 		F655074426385B8A00EC0BC4 /* MediumText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumText.swift; sourceTree = "<group>"; };
@@ -110,14 +109,12 @@
 		F691301826381C4100F8E22D /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
 		F6BAE1E82618A74B00BEC167 /* AddressItemImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressItemImage.swift; sourceTree = "<group>"; };
 		F6BAE2132619A54800BEC167 /* AddressBalanceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressBalanceResponse.swift; sourceTree = "<group>"; };
-		F6BAE21D2619BC4200BEC167 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		F6BAE2222619BCFC00BEC167 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F6BAE227261A508D00BEC167 /* ToggleElementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleElementView.swift; sourceTree = "<group>"; };
 		F6BAE22C261A50DF00BEC167 /* ToggleElementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleElementViewModel.swift; sourceTree = "<group>"; };
 		F6BAE231261A514F00BEC167 /* ToggleElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleElement.swift; sourceTree = "<group>"; };
 		F6BAE236261A54E400BEC167 /* AddressItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressItemType.swift; sourceTree = "<group>"; };
 		F6BAE241261B1A1800BEC167 /* ListSeparatorStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSeparatorStyle.swift; sourceTree = "<group>"; };
-		F6BAE250261B7A7C00BEC167 /* RoundText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundText.swift; sourceTree = "<group>"; };
 		F6BAE25D261C6E7500BEC167 /* NftData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NftData.swift; sourceTree = "<group>"; };
 		F6BAE262261C730A00BEC167 /* NftExtData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NftExtData.swift; sourceTree = "<group>"; };
 		F6BAE26F261C7E1D00BEC167 /* NftItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NftItemView.swift; sourceTree = "<group>"; };
@@ -137,8 +134,7 @@
 		F6C08A4D26187C4700EF0312 /* AddressItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressItem.swift; sourceTree = "<group>"; };
 		F6C08A5526187D0A00EF0312 /* AddressBalance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressBalance.swift; sourceTree = "<group>"; };
 		F6C08A5A2618899600EF0312 /* AddressItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressItemView.swift; sourceTree = "<group>"; };
-		F6C08A5F261895BE00EF0312 /* AddressExplorerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressExplorerRepository.swift; sourceTree = "<group>"; };
-		F6C08A642618962600EF0312 /* MockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockModel.swift; sourceTree = "<group>"; };
+		F6C08A5F261895BE00EF0312 /* DataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRepository.swift; sourceTree = "<group>"; };
 		F6C08A6A2618973500EF0312 /* AddressExplorerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressExplorerViewModel.swift; sourceTree = "<group>"; };
 		F6C08A7F2618A25E00EF0312 /* AppDelegate+Resolving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Resolving.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -353,9 +349,7 @@
 		F6C08A4926187B6600EF0312 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				F6C08A5F261895BE00EF0312 /* AddressExplorerRepository.swift */,
-				F6C08A642618962600EF0312 /* MockModel.swift */,
-				F6BAE21D2619BC4200BEC167 /* NetworkClient.swift */,
+				F6C08A5F261895BE00EF0312 /* DataRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -373,10 +367,10 @@
 			isa = PBXGroup;
 			children = (
 				F6BAE241261B1A1800BEC167 /* ListSeparatorStyle.swift */,
-				F6BAE250261B7A7C00BEC167 /* RoundText.swift */,
 				F655073F26385B2100EC0BC4 /* LargeText.swift */,
 				F655074426385B8A00EC0BC4 /* MediumText.swift */,
 				F655074926385B9100EC0BC4 /* SmallText.swift */,
+				F648C0232639F33000890A42 /* MediumTextRegular.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -662,7 +656,7 @@
 				F6C08A08261878A200EF0312 /* ContentView.swift in Sources */,
 				F62BA01B261DFA01007E8AD7 /* TransactionExplorerView.swift in Sources */,
 				F6BAE242261B1A1800BEC167 /* ListSeparatorStyle.swift in Sources */,
-				F6C08A60261895BE00EF0312 /* AddressExplorerRepository.swift in Sources */,
+				F6C08A60261895BE00EF0312 /* DataRepository.swift in Sources */,
 				F6BAE25E261C6E7500BEC167 /* NftData.swift in Sources */,
 				F6BAE237261A54E400BEC167 /* AddressItemType.swift in Sources */,
 				F655074A26385B9100EC0BC4 /* SmallText.swift in Sources */,
@@ -674,10 +668,9 @@
 				F6C08A802618A25E00EF0312 /* AppDelegate+Resolving.swift in Sources */,
 				F62BA013261DF9D1007E8AD7 /* ProfileView.swift in Sources */,
 				F62BA005261DF8D4007E8AD7 /* TitleView.swift in Sources */,
-				F6C08A652618962600EF0312 /* MockModel.swift in Sources */,
-				F6BAE21E2619BC4200BEC167 /* NetworkClient.swift in Sources */,
 				F666DFA8262CA2880002E40C /* AddressModalViewModel.swift in Sources */,
 				F62BA046261F459D007E8AD7 /* TransactionExplorerViewModel.swift in Sources */,
+				F648C0242639F33000890A42 /* MediumTextRegular.swift in Sources */,
 				F6C08A5626187D0A00EF0312 /* AddressBalance.swift in Sources */,
 				F6BAE1E92618A74B00BEC167 /* AddressItemImage.swift in Sources */,
 				F6BAE2232619BCFC00BEC167 /* Constants.swift in Sources */,
@@ -688,7 +681,6 @@
 				F6C08A06261878A200EF0312 /* cov1App.swift in Sources */,
 				F6BAE270261C7E1D00BEC167 /* NftItemView.swift in Sources */,
 				F6BAE22D261A50DF00BEC167 /* ToggleElementViewModel.swift in Sources */,
-				F6BAE251261B7A7C00BEC167 /* RoundText.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

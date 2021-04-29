@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct ProfileView: View {
-
+    
     @State private var isPresented = false
     @ObservedObject var viewModel = ProfileViewModel()
-
+    
     var body: some View {
         
         VStack {
@@ -26,27 +26,25 @@ struct ProfileView: View {
                 
                 Text("Network:").smallText()
                     .foregroundColor(Color.gray)
+                
                 HStack {
                     Mainnet
                     Testnet
                 }
+                
                 Spacer()
             }.padding().padding(.top, 0).background(Color.white).cornerRadius(30)
             
-          
             
         }.background(Color("AvaGray"))
         .navigationBarHidden(true).edgesIgnoringSafeArea(.top).fullScreenCover(isPresented: $isPresented, content: AddressModalView.init)
         
-
     }
 }
 
 private extension ProfileView {
     
     var Mainnet: some View {
-        
-       
         
         Button(action: {
             viewModel.toggleNet(true)
@@ -56,7 +54,7 @@ private extension ProfileView {
                 .frame(minWidth: 0, maxWidth: .infinity)
                 .padding(6)
                 .background(
-                    Capsule().foregroundColor(viewModel.didSelectMainNet ? Color("AvaRed") : Color("AvaGray"))
+                    Rectangle().cornerRadius(6).foregroundColor(viewModel.didSelectMainNet ? Color("AvaRed") : Color("AvaGray"))
                 )
         }.padding()
     }
@@ -71,20 +69,18 @@ private extension ProfileView {
                 .frame(minWidth: 0, maxWidth: .infinity)
                 .padding(6)
                 .background(
-                    Capsule().foregroundColor(viewModel.didSelectMainNet ? Color("AvaGray") : Color("AvaRed"))
+                    Rectangle().cornerRadius(6).foregroundColor(viewModel.didSelectMainNet ? Color("AvaGray") : Color("AvaRed"))
                 )
         }.padding()
     }
     
     var AddressButton: some View {
-
-            Button(action: {
-                isPresented.toggle()
-            }) {
-                // Image(systemName: "pencil")
-                Text(viewModel.address).mediumText().foregroundColor(Color("AvaRed"))
-            }.padding()
         
+        Button(action: {
+            isPresented.toggle()
+        }) {
+            Text(viewModel.address).mediumText().foregroundColor(Color("AvaRed"))
+        }.padding()
     }
     
 }

@@ -12,7 +12,6 @@ struct AddressModalView: View {
     @Environment(\.presentationMode) var presentationMode
     @ObservedObject var viewModel = AddressModalViewModel()
     
-    
     var body: some View {
         
         VStack {
@@ -24,16 +23,15 @@ struct AddressModalView: View {
                 Save
             }
         }
-
     }
 }
 
 private extension AddressModalView {
     
     var Address: some View {
-        TextField("Title", text: $viewModel.address).font(.caption).padding()
+        TextField("Title", text: $viewModel.address).mediumText().padding()
             .background(Color("AvaGray"))
-            .cornerRadius(10).padding()
+            .cornerRadius(6).padding()
     }
     
     var Cancel: some View {
@@ -42,16 +40,14 @@ private extension AddressModalView {
             presentationMode.wrappedValue.dismiss()
         }) {
             Text("Cancel")
-                .font(.caption)
-                .fontWeight(.bold)
-                .foregroundColor(.white)
+                .mediumText()
+                .foregroundColor(Color("AvaPurple"))
                 .frame(minWidth: 0, maxWidth: .infinity)
                 .padding(6)
                 .background(
-                    Capsule().foregroundColor(Color("AvaRed"))
+                    Rectangle().cornerRadius(6).foregroundColor(Color("AvaGray"))
                 ).padding()
         }
-
     }
     
     var Save: some View {
@@ -62,16 +58,14 @@ private extension AddressModalView {
 
         }) {
             Text("Save")
-                .font(.caption)
-                .fontWeight(.bold)
+                .mediumText()
                 .foregroundColor(.white)
                 .frame(minWidth: 0, maxWidth: .infinity)
                 .padding(6)
                 .background(
-                    Capsule().foregroundColor(Color("AvaRed"))
+                    Rectangle().cornerRadius(6).foregroundColor(Color("AvaRed"))
                 ).padding()
         }
-        
     }
 }
 

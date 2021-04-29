@@ -13,29 +13,32 @@ struct AddressItemView: View {
     var addressItem: AddressItem
     
     var body: some View {
-        HStack {
-            // image
-            
-            AddressItemImage(url: addressItem.logo_url)
-            
-            VStack(alignment: .leading) {
-                HStack {
-                    Text(addressItem.contract_ticker_symbol)
-                        .font(.caption)
-                        .fontWeight(.light).foregroundColor(.gray)
-                    Spacer()
-                    Text(addressItem.type.rawValue.uppercased())
-                        .font(.caption)
-                        .fontWeight(.light)
-                        .foregroundColor(.gray)
-                    //.foregroundColor(self.getColor())
-                }
-                Text(addressItem.contract_name)
-                    .font(.headline)
-                    .fontWeight(.bold).foregroundColor(Color("AvaPurple"))
-                Text(addressItem.balance).font(.headline).fontWeight(.light).foregroundColor(Color("AvaPurple"))
-            }.padding(.top, 10)
-        }.roundFont()
+        VStack {
+            HStack(alignment: .center) {
+                // image
+                
+                AddressItemImage(url: addressItem.logo_url)
+                
+                VStack(alignment: .leading) {
+                    HStack {
+                        Text(addressItem.contract_ticker_symbol)
+                            .smallText().foregroundColor(.gray)
+                        Spacer()
+                        Text(addressItem.type.rawValue)
+                            .smallText()
+                            .foregroundColor(.gray)
+                    }
+                    Text(addressItem.contract_name)
+                        .mediumTextReg().foregroundColor(Color("AvaPurple"))
+                    Text("\(addressItem.balanceComma)").mediumText().foregroundColor(Color("AvaPurple"))
+                    Text("$ \(addressItem.quote)").mediumText().foregroundColor(Color("AvaPurple"))
+
+                }.padding(.top, 8).padding(.bottom, 8)
+            }
+            Divider()
+
+        }
+        
     }
     
     func getColor() -> Color {

@@ -14,9 +14,8 @@ struct ToggleElementView: View {
 
     var body: some View {
         HStack {
-            Text(viewModel.toggleElement.text.uppercased())
-                .font(.caption)
-                .fontWeight(.bold)
+            Text(viewModel.toggleElement.text)
+                .smallText()
                 .foregroundColor(viewModel.textColor)
                 //.frame(minWidth: 0, maxWidth: .infinity)
                 .padding(6)

@@ -22,7 +22,7 @@ struct TransactionItemView: View {
             }
             Text(trans.value)
                 .font(.headline)
-        }.roundFont()
+        }
     }
 }
 

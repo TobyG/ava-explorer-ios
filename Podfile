@@ -9,7 +9,7 @@ target 'cov1' do
   pod 'Resolver'
   pod 'Kingfisher/SwiftUI'
   pod 'Alamofire'
-
+  pod 'NotificationBannerSwift', '~> 3.0.0'
 
   target 'cov1Tests' do
     inherit! :search_paths

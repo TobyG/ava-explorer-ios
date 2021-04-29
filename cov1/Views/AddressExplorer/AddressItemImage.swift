@@ -13,9 +13,10 @@ struct AddressItemImage: View {
     var body: some View {
         KFImage(URL(string: self.url)).placeholder {
             // Placeholder while downloading.
-            Image(systemName: "photo")
-                .font(.largeTitle)
+            Image(systemName: "chevron.right")
+                .font(.headline)
                 .opacity(0.3)
+            //Image("coin_ph").resizable()
         }
         .resizable()
         .frame(width: 44, height: 44).cornerRadius(30)

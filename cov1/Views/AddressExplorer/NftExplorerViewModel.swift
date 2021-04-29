@@ -12,7 +12,7 @@ import Resolver
 
 class NftExplorerViewModel: ObservableObject {
 
-    @Published var addressExplorerRepository: AddressExplorerRepository = Resolver.resolve()
+    @Published var addressExplorerRepository: DataRepository = Resolver.resolve()
     @Published var addressItems = [AddressItem]()
     @Published var nftItems = [AddressItem]()
 
