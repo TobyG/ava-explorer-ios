@@ -17,36 +17,28 @@ struct NftItemView: View {
         
         VStack(alignment: .leading) {
             
-            AddressItemView(addressItem: addressItem)
-            /*
-             HStack {
-             Text(addressItem.contract_ticker_symbol)
-             .font(.caption)
-             .fontWeight(.light)
-             Spacer()
-             Text(addressItem.type.rawValue.uppercased())
-             .font(.caption)
-             .fontWeight(.light)
-             
-             }
-             Text(addressItem.contract_name)
-             .font(.headline)
-             .fontWeight(.bold)
-             Text(addressItem.balance).font(.headline).fontWeight(.light)
-             */
+            VStack(alignment: .leading) {
+                Text(addressItem.contract_ticker_symbol)
+                    .smallText().foregroundColor(.gray)
+                
+                Text(addressItem.contract_name)
+                    .mediumTextReg().foregroundColor(Color("AvaPurple"))
+            }
             
             LazyVGrid(columns: columns) {
                 ForEach(0..<addressItem.nft_data!.count, id: \.self) { index in
-                    
-                    KFImage(URL(string: addressItem.nft_data![index].external_data!.image)).placeholder {
-                        // Placeholder while downloading.
-                        Image(systemName: "photo")
-                            .font(.largeTitle)
-                            .opacity(0.3)
+                    if(addressItem.nft_data![index].external_data != nil) {
+                        KFImage(URL(string: addressItem.nft_data![index].external_data!.image)).placeholder {
+                            // Placeholder while downloading.
+                            Image(systemName: "photo")
+                                .font(.largeTitle)
+                                .opacity(0.3)
+                        }
+                        .resizable()
+                        .frame(width: 100, height: 100).cornerRadius(10)
                     }
-                    .resizable()
-                    .frame(width: 100, height: 100).cornerRadius(10)
-                     
+                    // Text("no ext. data")
+                    
                 }
             }.padding()
         }

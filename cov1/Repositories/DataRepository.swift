@@ -21,6 +21,10 @@ class BaseAddressExplorerRepository {
     @Published var didSelectMainNet: Bool = true
     
     var user: String = "onemillionwallets"
+    
+    @Published var tokenLoading: Bool = false
+    
+    @Published var alreadyUser: Bool = false
 }
 
 protocol DataRepository: BaseAddressExplorerRepository {
@@ -30,6 +34,9 @@ protocol DataRepository: BaseAddressExplorerRepository {
     func getAddress()
     func getDidSelectMainNet()
     func changeNet(_ val: Bool)
+    func setAlreadyUser(_ address: String)
+    func getAlreadyUser()
+    func resetUser()
 }
 
 
@@ -63,6 +70,7 @@ class HttpAddressExplorerRepository: BaseAddressExplorerRepository, DataReposito
                 }
                 guard let res = response.value else { return }
                 self.addressBalanceResponse = res
+                self.tokenLoading = false
             }
         
     }
@@ -87,10 +95,15 @@ class HttpAddressExplorerRepository: BaseAddressExplorerRepository, DataReposito
     
     func getAddress() {
         self.getDidSelectMainNet()
-        address = defaults.string(forKey: "address") ?? "click to change address"
-        self.loadData(address: address)
-        self.loadTransactions(address: address)
-    }
+        alreadyUser = defaults.bool(forKey: "alreadyUser")
+        if(alreadyUser) {
+            address = defaults.string(forKey: "address") ?? "click to change address"
+            self.tokenLoading = true
+            self.loadData(address: address)
+            self.loadTransactions(address: address)
+        }
+        }
+       
     
     func getDidSelectMainNet() {
         didSelectMainNet = defaults.bool(forKey: "didSelectMainNet")
@@ -99,6 +112,23 @@ class HttpAddressExplorerRepository: BaseAddressExplorerRepository, DataReposito
     func changeNet(_ val: Bool) {
         defaults.set(val, forKey: "didSelectMainNet")
         self.didSelectMainNet = val
+    }
+    
+    func setAlreadyUser(_ address: String) {
+        defaults.set(true, forKey: "alreadyUser")
+        alreadyUser = true
+        self.changeAddress(address: address)
+        
+    }
+    
+    func resetUser() {
+        defaults.set(false, forKey: "alreadyUser")
+        alreadyUser = false
+        self.changeAddress(address: "")
+    }
+    
+    func getAlreadyUser() {
+        alreadyUser = defaults.bool(forKey: "alreadyUser")
     }
     
     

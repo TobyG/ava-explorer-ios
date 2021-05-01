@@ -6,33 +6,13 @@
 //
 
 import SwiftUI
+import Resolver
 
 struct ContentView: View {
+    
     var body: some View {
-        TabView {
-            AddressExplorerView()
-                .tabItem {
-                    Label("Tokens", systemImage: "bitcoinsign.circle")
-                }
-            
-            NftExplorerView()
-                .tabItem {
-                    Label("NFTs", systemImage: "hexagon")
-                }
-            
-            TransactionExplorerView()
-                .tabItem {
-                    Label("Transactions", systemImage: "arrow.up.arrow.down.circle")
-                }
-            
-            ProfileView()
-                .tabItem {
-                    Label("Profile", systemImage: "person.circle")
-                }
-            
-        }.accentColor(Color("AvaRed")).onAppear() {
-            UITabBar.appearance().barTintColor = .white
-        }
+        
+        WelcomeView()
         
     }
 }

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -57,6 +57,11 @@
 		F6C08A60261895BE00EF0312 /* DataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C08A5F261895BE00EF0312 /* DataRepository.swift */; };
 		F6C08A6B2618973500EF0312 /* AddressExplorerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C08A6A2618973500EF0312 /* AddressExplorerViewModel.swift */; };
 		F6C08A802618A25E00EF0312 /* AppDelegate+Resolving.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C08A7F2618A25E00EF0312 /* AppDelegate+Resolving.swift */; };
+		F6F03E0F263C80EF003B25E4 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F03E0E263C80EF003B25E4 /* WelcomeView.swift */; };
+		F6F03E17263C80FF003B25E4 /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F03E16263C80FF003B25E4 /* WelcomeViewModel.swift */; };
+		F6F03E25263C8671003B25E4 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F03E24263C8671003B25E4 /* HomeViewModel.swift */; };
+		F6F03E36263C86A0003B25E4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F03E35263C86A0003B25E4 /* HomeView.swift */; };
+		F6F03E3F263CBC06003B25E4 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = F6F03E3E263CBC06003B25E4 /* SwiftUICharts */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,7 +123,7 @@
 		F6BAE25D261C6E7500BEC167 /* NftData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NftData.swift; sourceTree = "<group>"; };
 		F6BAE262261C730A00BEC167 /* NftExtData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NftExtData.swift; sourceTree = "<group>"; };
 		F6BAE26F261C7E1D00BEC167 /* NftItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NftItemView.swift; sourceTree = "<group>"; };
-		F6C08A02261878A200EF0312 /* cov1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cov1.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6C08A02261878A200EF0312 /* Explorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Explorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6C08A05261878A200EF0312 /* cov1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cov1App.swift; sourceTree = "<group>"; };
 		F6C08A07261878A200EF0312 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F6C08A09261878A500EF0312 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -137,6 +142,10 @@
 		F6C08A5F261895BE00EF0312 /* DataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRepository.swift; sourceTree = "<group>"; };
 		F6C08A6A2618973500EF0312 /* AddressExplorerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressExplorerViewModel.swift; sourceTree = "<group>"; };
 		F6C08A7F2618A25E00EF0312 /* AppDelegate+Resolving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Resolving.swift"; sourceTree = "<group>"; };
+		F6F03E0E263C80EF003B25E4 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		F6F03E16263C80FF003B25E4 /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
+		F6F03E24263C8671003B25E4 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		F6F03E35263C86A0003B25E4 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24CC77724CA1DF2977234EDC /* Pods_cov1.framework in Frameworks */,
+				F6F03E3F263CBC06003B25E4 /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,7 +229,7 @@
 			path = TransactionExplorer;
 			sourceTree = "<group>";
 		};
-		F62BA011261DF986007E8AD7 /* ProfileExplorer */ = {
+		F62BA011261DF986007E8AD7 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
 				F62BA012261DF9D1007E8AD7 /* ProfileView.swift */,
@@ -227,7 +237,7 @@
 				F666DF9D262C9BFE0002E40C /* AddressModalView.swift */,
 				F666DFA7262CA2880002E40C /* AddressModalViewModel.swift */,
 			);
-			path = ProfileExplorer;
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		F62BA036261F2B01007E8AD7 /* Transaction */ = {
@@ -286,7 +296,7 @@
 		F6C08A03261878A200EF0312 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F6C08A02261878A200EF0312 /* cov1.app */,
+				F6C08A02261878A200EF0312 /* Explorer.app */,
 				F6C08A13261878A600EF0312 /* cov1Tests.xctest */,
 				F6C08A1E261878A600EF0312 /* cov1UITests.xctest */,
 			);
@@ -337,7 +347,9 @@
 		F6C08A4826187B6000EF0312 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F62BA011261DF986007E8AD7 /* ProfileExplorer */,
+				F6F03E23263C8664003B25E4 /* Home */,
+				F6F03E0D263C80D6003B25E4 /* WelcomeView */,
+				F62BA011261DF986007E8AD7 /* Profile */,
 				F62BA010261DF975007E8AD7 /* TransactionExplorer */,
 				F62BA009261DF8D8007E8AD7 /* Helper */,
 				F6C08A692618971700EF0312 /* AddressExplorer */,
@@ -401,6 +413,24 @@
 			path = AddressExplorer;
 			sourceTree = "<group>";
 		};
+		F6F03E0D263C80D6003B25E4 /* WelcomeView */ = {
+			isa = PBXGroup;
+			children = (
+				F6F03E0E263C80EF003B25E4 /* WelcomeView.swift */,
+				F6F03E16263C80FF003B25E4 /* WelcomeViewModel.swift */,
+			);
+			path = WelcomeView;
+			sourceTree = "<group>";
+		};
+		F6F03E23263C8664003B25E4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F6F03E24263C8671003B25E4 /* HomeViewModel.swift */,
+				F6F03E35263C86A0003B25E4 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -419,8 +449,11 @@
 			dependencies = (
 			);
 			name = cov1;
+			packageProductDependencies = (
+				F6F03E3E263CBC06003B25E4 /* SwiftUICharts */,
+			);
 			productName = cov1;
-			productReference = F6C08A02261878A200EF0312 /* cov1.app */;
+			productReference = F6C08A02261878A200EF0312 /* Explorer.app */;
 			productType = "com.apple.product-type.application";
 		};
 		F6C08A12261878A600EF0312 /* cov1Tests */ = {
@@ -493,6 +526,9 @@
 				Base,
 			);
 			mainGroup = F6C089F9261878A200EF0312;
+			packageReferences = (
+				F6F03E3D263CBC05003B25E4 /* XCRemoteSwiftPackageReference "ChartView" */,
+			);
 			productRefGroup = F6C08A03261878A200EF0312 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -644,17 +680,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				F62B9FF5261DCD3F007E8AD7 /* swiftgen.yml in Sources */,
+				F6F03E17263C80FF003B25E4 /* WelcomeViewModel.swift in Sources */,
 				F6BAE263261C730B00BEC167 /* NftExtData.swift in Sources */,
 				F666DF9E262C9BFE0002E40C /* AddressModalView.swift in Sources */,
 				F6C08A5B2618899600EF0312 /* AddressItemView.swift in Sources */,
 				F62BA03E261F3C11007E8AD7 /* TransactionItemView.swift in Sources */,
 				F6C08A3C261878D800EF0312 /* AddressExplorerView.swift in Sources */,
 				F62BA020261DFA32007E8AD7 /* NftExplorerView.swift in Sources */,
+				F6F03E0F263C80EF003B25E4 /* WelcomeView.swift in Sources */,
 				F6C08A4E26187C4700EF0312 /* AddressItem.swift in Sources */,
 				F6BAE228261A508D00BEC167 /* ToggleElementView.swift in Sources */,
 				F6BAE232261A514F00BEC167 /* ToggleElement.swift in Sources */,
+				F6F03E25263C8671003B25E4 /* HomeViewModel.swift in Sources */,
 				F6C08A08261878A200EF0312 /* ContentView.swift in Sources */,
 				F62BA01B261DFA01007E8AD7 /* TransactionExplorerView.swift in Sources */,
+				F6F03E36263C86A0003B25E4 /* HomeView.swift in Sources */,
 				F6BAE242261B1A1800BEC167 /* ListSeparatorStyle.swift in Sources */,
 				F6C08A60261895BE00EF0312 /* DataRepository.swift in Sources */,
 				F6BAE25E261C6E7500BEC167 /* NftData.swift in Sources */,
@@ -840,6 +880,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"cov1/Preview Content\"";
+				DEVELOPMENT_TEAM = 8VLD6L9YUL;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = cov1/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -848,7 +889,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cov1.cov1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Explorer;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -862,6 +903,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"cov1/Preview Content\"";
+				DEVELOPMENT_TEAM = 8VLD6L9YUL;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = cov1/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -870,7 +912,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cov1.cov1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Explorer;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1000,6 +1042,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F6F03E3D263CBC05003B25E4 /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F6F03E3E263CBC06003B25E4 /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F6F03E3D263CBC05003B25E4 /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F6C089FA261878A200EF0312 /* Project object */;
 }

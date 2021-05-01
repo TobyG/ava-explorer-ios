@@ -32,7 +32,15 @@ struct ProfileView: View {
                     Testnet
                 }
                 
+                Text("Help:").smallText()
+                    .foregroundColor(Color.gray)
+                
+                Link("Give Feedback", destination: URL(string: "https://avaxios.changecrab.com")!).mediumText().foregroundColor(Color("AvaRed")).padding()
+
+                Reset
+                
                 Spacer()
+                Text("v. 0.0.1").smallText().foregroundColor(.gray)
             }.padding().padding(.top, 0).background(Color.white).cornerRadius(30)
             
             
@@ -80,6 +88,15 @@ private extension ProfileView {
             isPresented.toggle()
         }) {
             Text(viewModel.address).mediumText().foregroundColor(Color("AvaRed"))
+        }.padding()
+    }
+    
+    var Reset: some View {
+        
+        Button(action: {
+            viewModel.reset()
+        }) {
+            Text("Reset").mediumText().foregroundColor(Color("AvaRed"))
         }.padding()
     }
     

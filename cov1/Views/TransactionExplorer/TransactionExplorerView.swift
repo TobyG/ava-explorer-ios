@@ -20,7 +20,7 @@ struct TransactionExplorerView: View {
                     LazyVStack {
                         /*ForEach(0..<viewModel.filteredAddressItems.count, id: \.self) { index in*/
                         ForEach(0..<viewModel.transactions.count, id: \.self) { index in
-                            TransactionItemView(trans: viewModel.transactions[index])
+                            TransactionItemView(trans: viewModel.transactions[index], address: viewModel.address)
                         }
                     }.padding().padding(.top, 0).background(Color.white).cornerRadius(30)
                     

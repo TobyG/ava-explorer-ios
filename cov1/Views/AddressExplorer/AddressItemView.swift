@@ -35,8 +35,6 @@ struct AddressItemView: View {
 
                 }.padding(.top, 8).padding(.bottom, 8)
             }
-            Divider()
-
         }
         
     }

@@ -34,4 +34,8 @@ class ProfileViewModel: ObservableObject {
         dataRepository.changeNet(val)
     }
     
+    func reset() {
+        dataRepository.resetUser()
+    }
+    
 }

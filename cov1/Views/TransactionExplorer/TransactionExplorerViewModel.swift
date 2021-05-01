@@ -12,6 +12,7 @@ class TransactionExplorerViewModel: ObservableObject {
 
     @Published var addressExplorerRepository: DataRepository = Resolver.resolve()
     @Published var transactions = [Transaction]()
+    @Published var address: String = ""
 
     private var cancellables = Set<AnyCancellable>()
     
@@ -19,6 +20,11 @@ class TransactionExplorerViewModel: ObservableObject {
        
         addressExplorerRepository.$transactionData.sink(receiveValue: { value in
             self.transactions = value.items
+            
+        }).store(in: &cancellables)
+        
+        addressExplorerRepository.$address.sink(receiveValue: { value in
+            self.address = value
             
         }).store(in: &cancellables)
         

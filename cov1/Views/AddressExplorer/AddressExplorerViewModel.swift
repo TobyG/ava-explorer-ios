@@ -12,7 +12,7 @@ import Resolver
 class AddressExplorerViewModel: ObservableObject {
     
     // repository to get data
-    @Published var addressExplorerRepository: DataRepository = Resolver.resolve()
+    @Published var dataRepository: DataRepository = Resolver.resolve()
     
     // @Published var addressBalance: AddressBalance = AddressBalance(address: "", updated_at: "", next_update_at: "", quote_currency: "", chain_id: 0, items: [])
     
@@ -33,7 +33,7 @@ class AddressExplorerViewModel: ObservableObject {
     }
     
     init() {
-        addressExplorerRepository.$addressBalanceResponse.sink(receiveValue: { value in
+        dataRepository.$addressBalanceResponse.sink(receiveValue: { value in
             //self.addressBalance = value.data
             self.addressItems = value.data.items
             self.tokenItems = self.addressItems.filter { $0.nft_data == nil}
@@ -41,6 +41,10 @@ class AddressExplorerViewModel: ObservableObject {
             self.filteredAddressItems = self.tokenItems
             self.onFilter()
             
+        }).store(in: &cancellables)
+        
+        dataRepository.$tokenLoading.sink(receiveValue: {value in
+            self.isLoading = value
         }).store(in: &cancellables)
         
         
