@@ -13,16 +13,11 @@ class AddressExplorerViewModel: ObservableObject {
     
     // repository to get data
     @Published var dataRepository: DataRepository = Resolver.resolve()
-    
-    // @Published var addressBalance: AddressBalance = AddressBalance(address: "", updated_at: "", next_update_at: "", quote_currency: "", chain_id: 0, items: [])
-    
     @Published var typeFilterViewModels = [ToggleElementViewModel]()
     @Published var filteredAddressItems: [AddressItem] = []
     @Published var addressItems = [AddressItem]()
-    
     @Published var tokenItems = [AddressItem]()
     @Published var nftItems = [AddressItem]()
-    
     @Published var isLoading: Bool = false
     
     
@@ -34,11 +29,10 @@ class AddressExplorerViewModel: ObservableObject {
     
     init() {
         dataRepository.$addressBalanceResponse.sink(receiveValue: { value in
-            //self.addressBalance = value.data
-            self.addressItems = value.data.items
-            self.tokenItems = self.addressItems.filter { $0.nft_data == nil}
-            self.nftItems = self.addressItems.filter { $0.nft_data != nil }
-            self.filteredAddressItems = self.tokenItems
+            //self.addressItems =
+            self.tokenItems = value.data.items
+            self.nftItems = self.tokenItems.filter { $0.nft_data != nil }
+            self.filteredAddressItems = self.tokenItems.filter { $0.nft_data == nil}
             self.onFilter()
             
         }).store(in: &cancellables)
@@ -47,11 +41,9 @@ class AddressExplorerViewModel: ObservableObject {
             self.isLoading = value
         }).store(in: &cancellables)
         
-        
         self.typeFilterViewModels = [ToggleElementViewModel(toggleElement: ToggleElement(isOn: true, text: "cryptocurrency")),
                                      ToggleElementViewModel(toggleElement: ToggleElement(isOn: false, text: "stablecoin")),
                                      ToggleElementViewModel(toggleElement: ToggleElement(isOn: false, text: "dust"))]
-        
     }
     
     /*
@@ -82,6 +74,10 @@ class AddressExplorerViewModel: ObservableObject {
             return true
         }
         return false
+    }
+    
+    func onRefresh() {
+        self.dataRepository.loadTokensAndNfts()
     }
     
     

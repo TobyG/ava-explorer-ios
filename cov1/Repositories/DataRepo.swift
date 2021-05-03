@@ -4,19 +4,26 @@
 //
 //  Created by Tobias P on 03.04.21.
 //
-/*
+
 import Foundation
 import Alamofire
 import Combine
 import NotificationBannerSwift
 
-class BaseAddressExplorerRepository {
+class DataRepository: ObservableObject {
     @Published var addressItems = [AddressItem]()
     @Published var addressBalance: AddressBalance = AddressBalance(address: "", updated_at: "", next_update_at: "", quote_currency: "", chain_id: 0, items: [])
     @Published var addressBalanceResponse: AddressBalanceResponse = AddressBalanceResponse(data: AddressBalance(address: "", updated_at: "", next_update_at: "", quote_currency: "", chain_id: 0, items: []))
     
     @Published var transactionData: TransactionData = TransactionData(address: "", updated_at: "", next_update_at: "", quote_currency: "", chain_id: 0, items: [])
-    
+    let defaults = UserDefaults.standard
+    @Published var address: String = "" {
+        didSet {
+            print("set address")
+            self.loadTransactions()
+            self.loadTokensAndNfts()
+        }
+    }
     
     @Published var didSelectMainNet: Bool = true
     
@@ -26,42 +33,15 @@ class BaseAddressExplorerRepository {
     @Published var transactionsLoading: Bool = false
     
     @Published var alreadyUser: Bool = false
-}
-
-protocol DataRepository: BaseAddressExplorerRepository {
-    func loadTransactions()
-    func loadTokensAndNfts()
-    func changeAddress(address: String)
-    func getAddress()
-    func getDidSelectMainNet()
-    func changeNet(_ val: Bool)
-    func setAlreadyUser(_ address: String)
-    func getAlreadyUser()
-    func resetUser()
-    
-}
-
-
-
-class HttpAddressExplorerRepository: BaseAddressExplorerRepository, DataRepository, ObservableObject {
-    
-    let defaults = UserDefaults.standard
-    @Published var address: String = "" {
-        didSet {
-            print("set address")
-            self.loadTransactions()
-            self.loadTokensAndNfts()
-        }
-    }
-    override init() {
-        super.init()
-        self.getAddress()
-        
-        
-    }
     
     private var apiCancellationToken: AnyCancellable?
     private var cancellables = Set<AnyCancellable>()
+    
+    init() {
+        self.getAddress()
+    }
+    
+
     
     func loadTokensAndNfts() {
         self.tokenLoading = true
@@ -145,5 +125,3 @@ class HttpAddressExplorerRepository: BaseAddressExplorerRepository, DataReposito
     
     
 }
-
- */

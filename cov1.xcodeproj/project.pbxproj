@@ -31,9 +31,12 @@
 		F666DF9E262C9BFE0002E40C /* AddressModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F666DF9D262C9BFE0002E40C /* AddressModalView.swift */; };
 		F666DFA3262CA0390002E40C /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F666DFA2262CA0390002E40C /* ProfileViewModel.swift */; };
 		F666DFA8262CA2880002E40C /* AddressModalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F666DFA7262CA2880002E40C /* AddressModalViewModel.swift */; };
+		F68382AF263F586A000FA342 /* SwiftUIPullToRefresh in Frameworks */ = {isa = PBXBuildFile; productRef = F68382AE263F586A000FA342 /* SwiftUIPullToRefresh */; };
+		F68382B2263F61CF000FA342 /* SwiftUIRefresh in Frameworks */ = {isa = PBXBuildFile; productRef = F68382B1263F61CF000FA342 /* SwiftUIRefresh */; };
+		F68382B4264015FE000FA342 /* DataRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68382B3264015FE000FA342 /* DataRepo.swift */; };
 		F691301926381C9200F8E22D /* Rubik-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F691301726381C4100F8E22D /* Rubik-Light.ttf */; };
 		F691301D26381C9900F8E22D /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F691301826381C4100F8E22D /* Rubik-Regular.ttf */; };
-		F6BAE1E92618A74B00BEC167 /* AddressItemImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BAE1E82618A74B00BEC167 /* AddressItemImage.swift */; };
+		F6BAE1E92618A74B00BEC167 /* TokenImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BAE1E82618A74B00BEC167 /* TokenImage.swift */; };
 		F6BAE2142619A54900BEC167 /* AddressBalanceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BAE2132619A54800BEC167 /* AddressBalanceResponse.swift */; };
 		F6BAE2232619BCFC00BEC167 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BAE2222619BCFC00BEC167 /* Constants.swift */; };
 		F6BAE228261A508D00BEC167 /* ToggleElementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BAE227261A508D00BEC167 /* ToggleElementView.swift */; };
@@ -53,7 +56,7 @@
 		F6C08A3C261878D800EF0312 /* AddressExplorerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C08A3B261878D800EF0312 /* AddressExplorerView.swift */; };
 		F6C08A4E26187C4700EF0312 /* AddressItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C08A4D26187C4700EF0312 /* AddressItem.swift */; };
 		F6C08A5626187D0A00EF0312 /* AddressBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C08A5526187D0A00EF0312 /* AddressBalance.swift */; };
-		F6C08A5B2618899600EF0312 /* AddressItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C08A5A2618899600EF0312 /* AddressItemView.swift */; };
+		F6C08A5B2618899600EF0312 /* TokenItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C08A5A2618899600EF0312 /* TokenItemView.swift */; };
 		F6C08A60261895BE00EF0312 /* DataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C08A5F261895BE00EF0312 /* DataRepository.swift */; };
 		F6C08A6B2618973500EF0312 /* AddressExplorerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C08A6A2618973500EF0312 /* AddressExplorerViewModel.swift */; };
 		F6C08A802618A25E00EF0312 /* AppDelegate+Resolving.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C08A7F2618A25E00EF0312 /* AppDelegate+Resolving.swift */; };
@@ -110,9 +113,10 @@
 		F666DF9D262C9BFE0002E40C /* AddressModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressModalView.swift; sourceTree = "<group>"; };
 		F666DFA2262CA0390002E40C /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		F666DFA7262CA2880002E40C /* AddressModalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressModalViewModel.swift; sourceTree = "<group>"; };
+		F68382B3264015FE000FA342 /* DataRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRepo.swift; sourceTree = "<group>"; };
 		F691301726381C4100F8E22D /* Rubik-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Rubik-Light.ttf"; path = "/Users/tobias/Documents/Xcode/cov1/cov1/Resources/Rubik-Light.ttf"; sourceTree = "<absolute>"; };
 		F691301826381C4100F8E22D /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
-		F6BAE1E82618A74B00BEC167 /* AddressItemImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressItemImage.swift; sourceTree = "<group>"; };
+		F6BAE1E82618A74B00BEC167 /* TokenImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenImage.swift; sourceTree = "<group>"; };
 		F6BAE2132619A54800BEC167 /* AddressBalanceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressBalanceResponse.swift; sourceTree = "<group>"; };
 		F6BAE2222619BCFC00BEC167 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F6BAE227261A508D00BEC167 /* ToggleElementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleElementView.swift; sourceTree = "<group>"; };
@@ -138,7 +142,7 @@
 		F6C08A3B261878D800EF0312 /* AddressExplorerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressExplorerView.swift; sourceTree = "<group>"; };
 		F6C08A4D26187C4700EF0312 /* AddressItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressItem.swift; sourceTree = "<group>"; };
 		F6C08A5526187D0A00EF0312 /* AddressBalance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressBalance.swift; sourceTree = "<group>"; };
-		F6C08A5A2618899600EF0312 /* AddressItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressItemView.swift; sourceTree = "<group>"; };
+		F6C08A5A2618899600EF0312 /* TokenItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenItemView.swift; sourceTree = "<group>"; };
 		F6C08A5F261895BE00EF0312 /* DataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRepository.swift; sourceTree = "<group>"; };
 		F6C08A6A2618973500EF0312 /* AddressExplorerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressExplorerViewModel.swift; sourceTree = "<group>"; };
 		F6C08A7F2618A25E00EF0312 /* AppDelegate+Resolving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Resolving.swift"; sourceTree = "<group>"; };
@@ -153,8 +157,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F68382B2263F61CF000FA342 /* SwiftUIRefresh in Frameworks */,
 				24CC77724CA1DF2977234EDC /* Pods_cov1.framework in Frameworks */,
 				F6F03E3F263CBC06003B25E4 /* SwiftUICharts in Frameworks */,
+				F68382AF263F586A000FA342 /* SwiftUIPullToRefresh in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,6 +206,16 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		F6206478263E043600B01F94 /* NFTs */ = {
+			isa = PBXGroup;
+			children = (
+				F6BAE26F261C7E1D00BEC167 /* NftItemView.swift */,
+				F62BA01F261DFA32007E8AD7 /* NftExplorerView.swift */,
+				F62BA024261EE7C8007E8AD7 /* NftExplorerViewModel.swift */,
+			);
+			path = NFTs;
+			sourceTree = "<group>";
+		};
 		F62B9FFC261DCD79007E8AD7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,14 +235,14 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
-		F62BA010261DF975007E8AD7 /* TransactionExplorer */ = {
+		F62BA010261DF975007E8AD7 /* Transactions */ = {
 			isa = PBXGroup;
 			children = (
 				F62BA01A261DFA01007E8AD7 /* TransactionExplorerView.swift */,
 				F62BA03D261F3C11007E8AD7 /* TransactionItemView.swift */,
 				F62BA045261F459D007E8AD7 /* TransactionExplorerViewModel.swift */,
 			);
-			path = TransactionExplorer;
+			path = Transactions;
 			sourceTree = "<group>";
 		};
 		F62BA011261DF986007E8AD7 /* Profile */ = {
@@ -347,13 +363,14 @@
 		F6C08A4826187B6000EF0312 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F6F03E23263C8664003B25E4 /* Home */,
-				F6F03E0D263C80D6003B25E4 /* WelcomeView */,
-				F62BA011261DF986007E8AD7 /* Profile */,
-				F62BA010261DF975007E8AD7 /* TransactionExplorer */,
-				F62BA009261DF8D8007E8AD7 /* Helper */,
-				F6C08A692618971700EF0312 /* AddressExplorer */,
 				F6C08A07261878A200EF0312 /* ContentView.swift */,
+				F6F03E0D263C80D6003B25E4 /* Welcome */,
+				F6F03E23263C8664003B25E4 /* Home */,
+				F6C08A692618971700EF0312 /* Tokens */,
+				F6206478263E043600B01F94 /* NFTs */,
+				F62BA010261DF975007E8AD7 /* Transactions */,
+				F62BA011261DF986007E8AD7 /* Profile */,
+				F62BA009261DF8D8007E8AD7 /* Helper */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -362,6 +379,7 @@
 			isa = PBXGroup;
 			children = (
 				F6C08A5F261895BE00EF0312 /* DataRepository.swift */,
+				F68382B3264015FE000FA342 /* DataRepo.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -397,36 +415,33 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		F6C08A692618971700EF0312 /* AddressExplorer */ = {
+		F6C08A692618971700EF0312 /* Tokens */ = {
 			isa = PBXGroup;
 			children = (
 				F6C08A3B261878D800EF0312 /* AddressExplorerView.swift */,
 				F6C08A6A2618973500EF0312 /* AddressExplorerViewModel.swift */,
-				F6C08A5A2618899600EF0312 /* AddressItemView.swift */,
-				F6BAE1E82618A74B00BEC167 /* AddressItemImage.swift */,
-				F6BAE26F261C7E1D00BEC167 /* NftItemView.swift */,
-				F62BA01F261DFA32007E8AD7 /* NftExplorerView.swift */,
-				F62BA024261EE7C8007E8AD7 /* NftExplorerViewModel.swift */,
+				F6C08A5A2618899600EF0312 /* TokenItemView.swift */,
+				F6BAE1E82618A74B00BEC167 /* TokenImage.swift */,
 				F6BAE227261A508D00BEC167 /* ToggleElementView.swift */,
 				F6BAE22C261A50DF00BEC167 /* ToggleElementViewModel.swift */,
 			);
-			path = AddressExplorer;
+			path = Tokens;
 			sourceTree = "<group>";
 		};
-		F6F03E0D263C80D6003B25E4 /* WelcomeView */ = {
+		F6F03E0D263C80D6003B25E4 /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
 				F6F03E0E263C80EF003B25E4 /* WelcomeView.swift */,
 				F6F03E16263C80FF003B25E4 /* WelcomeViewModel.swift */,
 			);
-			path = WelcomeView;
+			path = Welcome;
 			sourceTree = "<group>";
 		};
 		F6F03E23263C8664003B25E4 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				F6F03E24263C8671003B25E4 /* HomeViewModel.swift */,
 				F6F03E35263C86A0003B25E4 /* HomeView.swift */,
+				F6F03E24263C8671003B25E4 /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -451,6 +466,8 @@
 			name = cov1;
 			packageProductDependencies = (
 				F6F03E3E263CBC06003B25E4 /* SwiftUICharts */,
+				F68382AE263F586A000FA342 /* SwiftUIPullToRefresh */,
+				F68382B1263F61CF000FA342 /* SwiftUIRefresh */,
 			);
 			productName = cov1;
 			productReference = F6C08A02261878A200EF0312 /* Explorer.app */;
@@ -528,6 +545,8 @@
 			mainGroup = F6C089F9261878A200EF0312;
 			packageReferences = (
 				F6F03E3D263CBC05003B25E4 /* XCRemoteSwiftPackageReference "ChartView" */,
+				F68382AD263F586A000FA342 /* XCRemoteSwiftPackageReference "SwiftUI-PullToRefresh" */,
+				F68382B0263F61CF000FA342 /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */,
 			);
 			productRefGroup = F6C08A03261878A200EF0312 /* Products */;
 			projectDirPath = "";
@@ -683,7 +702,7 @@
 				F6F03E17263C80FF003B25E4 /* WelcomeViewModel.swift in Sources */,
 				F6BAE263261C730B00BEC167 /* NftExtData.swift in Sources */,
 				F666DF9E262C9BFE0002E40C /* AddressModalView.swift in Sources */,
-				F6C08A5B2618899600EF0312 /* AddressItemView.swift in Sources */,
+				F6C08A5B2618899600EF0312 /* TokenItemView.swift in Sources */,
 				F62BA03E261F3C11007E8AD7 /* TransactionItemView.swift in Sources */,
 				F6C08A3C261878D800EF0312 /* AddressExplorerView.swift in Sources */,
 				F62BA020261DFA32007E8AD7 /* NftExplorerView.swift in Sources */,
@@ -712,11 +731,12 @@
 				F62BA046261F459D007E8AD7 /* TransactionExplorerViewModel.swift in Sources */,
 				F648C0242639F33000890A42 /* MediumTextRegular.swift in Sources */,
 				F6C08A5626187D0A00EF0312 /* AddressBalance.swift in Sources */,
-				F6BAE1E92618A74B00BEC167 /* AddressItemImage.swift in Sources */,
+				F6BAE1E92618A74B00BEC167 /* TokenImage.swift in Sources */,
 				F6BAE2232619BCFC00BEC167 /* Constants.swift in Sources */,
 				F6BAE2142619A54900BEC167 /* AddressBalanceResponse.swift in Sources */,
 				F655074526385B8A00EC0BC4 /* MediumText.swift in Sources */,
 				F666DFA3262CA0390002E40C /* ProfileViewModel.swift in Sources */,
+				F68382B4264015FE000FA342 /* DataRepo.swift in Sources */,
 				F62BA025261EE7C8007E8AD7 /* NftExplorerViewModel.swift in Sources */,
 				F6C08A06261878A200EF0312 /* cov1App.swift in Sources */,
 				F6BAE270261C7E1D00BEC167 /* NftItemView.swift in Sources */,
@@ -1044,6 +1064,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		F68382AD263F586A000FA342 /* XCRemoteSwiftPackageReference "SwiftUI-PullToRefresh" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/SwiftUI-PullToRefresh";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		F68382B0263F61CF000FA342 /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/timbersoftware/SwiftUIRefresh.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.3;
+			};
+		};
 		F6F03E3D263CBC05003B25E4 /* XCRemoteSwiftPackageReference "ChartView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/AppPear/ChartView";
@@ -1055,6 +1091,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		F68382AE263F586A000FA342 /* SwiftUIPullToRefresh */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F68382AD263F586A000FA342 /* XCRemoteSwiftPackageReference "SwiftUI-PullToRefresh" */;
+			productName = SwiftUIPullToRefresh;
+		};
+		F68382B1263F61CF000FA342 /* SwiftUIRefresh */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F68382B0263F61CF000FA342 /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */;
+			productName = SwiftUIRefresh;
+		};
 		F6F03E3E263CBC06003B25E4 /* SwiftUICharts */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F6F03E3D263CBC05003B25E4 /* XCRemoteSwiftPackageReference "ChartView" */;

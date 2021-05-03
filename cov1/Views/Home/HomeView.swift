@@ -17,7 +17,7 @@ struct HomeView: View {
             
             NftExplorerView()
                 .tabItem {
-                    Label("NFTs", systemImage: "hexagon")
+                    Label("NFTs", systemImage: "n.circle")
                 }
             
             TransactionExplorerView()

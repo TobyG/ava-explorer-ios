@@ -13,34 +13,24 @@ struct WelcomeView: View {
     
     var body: some View {
         
-        
         NavigationView {
             VStack {
-                Image("avax").resizable().frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/).padding(.top, 60)
+                Image("avax").resizable().frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/).padding(.top, 50)
                 Text("Avalanche").font(Font.custom("Rubik-Regular", size: 30)).foregroundColor(Color("AvaPurple"))
                 Text("C-Chain").smallText().foregroundColor(.gray)
-                Text("Welcome!").largeText().foregroundColor(Color("AvaPurple")).padding(.top, 60)
+                Text("Welcome!").largeText().foregroundColor(Color("AvaPurple")).padding(.top, 50)
                 Text("Please enter an address:").mediumText().foregroundColor(Color("AvaPurple"))
                 
                 NavigationLink(destination: HomeView(), isActive: $viewModel.alreadyUser) {
                     EmptyView()
                 }
                 
-                if(viewModel.alreadyUser) {
-                    Text("already user")
-                }
-                else {
-                    Text("not already user")
-                }
-                            
                 Address
                 Continue
                 Spacer()
             }
         }
         
-        
-       
     }
 }
 
@@ -56,7 +46,7 @@ private extension WelcomeView {
         
         Button(action: {
             viewModel.onSubmit()
-
+            
         }) {
             Text("Continue")
                 .mediumText()
@@ -71,10 +61,10 @@ private extension WelcomeView {
     
     func validAddress() -> Bool {
         /*for char in viewModel.address {
-            if (!char.isHexDigit ) {
-                return false
-            }
-        }*/
+         if (!char.isHexDigit ) {
+         return false
+         }
+         }*/
         return viewModel.address.count == 42
     }
 }

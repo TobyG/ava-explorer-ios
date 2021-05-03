@@ -11,14 +11,14 @@ import Combine
 
 class ToggleElementViewModel: ObservableObject, Identifiable {
     @Published var toggleElement: ToggleElement
-
+    
     var id: String = ""
-
+    
     @Published var buttonColor = Color(.secondarySystemBackground)
     @Published var textColor = Color.white
     @Published var state = false
     private var cancellables = Set<AnyCancellable>()
-
+    
     init(toggleElement: ToggleElement) {
         self.toggleElement = toggleElement
         $toggleElement.sink(receiveValue: { value in

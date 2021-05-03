@@ -9,6 +9,33 @@
           "revision": "9115a992c91fa19cbb4f2241084240d38654a1fc",
           "version": "1.5.5"
         }
+      },
+      {
+        "package": "Introspect",
+        "repositoryURL": "https://github.com/siteline/SwiftUI-Introspect.git",
+        "state": {
+          "branch": null,
+          "revision": "2e09be8af614401bc9f87d40093ec19ce56ccaf2",
+          "version": "0.1.3"
+        }
+      },
+      {
+        "package": "SwiftUIPullToRefresh",
+        "repositoryURL": "https://github.com/AppPear/SwiftUI-PullToRefresh",
+        "state": {
+          "branch": null,
+          "revision": "5850f1ead6c4931015231bde26f38b9f543342aa",
+          "version": "1.0.0"
+        }
+      },
+      {
+        "package": "SwiftUIRefresh",
+        "repositoryURL": "https://github.com/timbersoftware/SwiftUIRefresh.git",
+        "state": {
+          "branch": null,
+          "revision": "fa8fac7b5eb5c729983a8bef65f094b5e0d12014",
+          "version": "0.0.3"
+        }
       }
     ]
   },
