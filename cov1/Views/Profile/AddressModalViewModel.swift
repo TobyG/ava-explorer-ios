@@ -19,11 +19,7 @@ class AddressModalViewModel: ObservableObject {
 
     
     init() {
-        addressExplorerRepository.$address.sink(receiveValue: { value in
-            self.address = value
-            print("address - " + self.address)
-           
-        }).store(in: &cancellables)
+        addressExplorerRepository.$address.assign(to: \.address, on: self).store(in: &cancellables)
     }
     
     func updateAddress() {

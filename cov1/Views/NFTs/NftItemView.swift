@@ -30,15 +30,11 @@ struct NftItemView: View {
                     if(addressItem.nft_data![index].external_data != nil) {
                         KFImage(URL(string: addressItem.nft_data![index].external_data!.image)).placeholder {
                             // Placeholder while downloading.
-                            Image(systemName: "photo")
-                                .font(.largeTitle)
-                                .opacity(0.3)
+                            ProgressView()
                         }
                         .resizable()
-                        .frame(width: 100, height: 100).cornerRadius(10)
+                        .frame(width: 90, height: 90).cornerRadius(6)
                     }
-                    // Text("no ext. data")
-                    
                 }
             }.padding()
         }

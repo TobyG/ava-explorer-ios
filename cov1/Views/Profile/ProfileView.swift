@@ -40,11 +40,11 @@ struct ProfileView: View {
                 Reset
                 
                 Spacer()
-                Text("v. 0.0.1").smallText().foregroundColor(.gray)
-            }.padding().padding(.top, 0).background(Color.white).cornerRadius(30)
+                Text("v. 0.0.2").smallText().foregroundColor(.gray)
+            }.padding().padding(.top, 0).background(Color("ListBackground"))
             
             
-        }.background(Color("AvaGray"))
+        }.background(Color("AvaGrayBackground"))
         .navigationBarHidden(true).edgesIgnoringSafeArea(.top).fullScreenCover(isPresented: $isPresented, content: AddressModalView.init)
         
     }
@@ -62,7 +62,7 @@ private extension ProfileView {
                 .frame(minWidth: 0, maxWidth: .infinity)
                 .padding(6)
                 .background(
-                    Rectangle().cornerRadius(6).foregroundColor(viewModel.didSelectMainNet ? Color("AvaRed") : Color("AvaGray"))
+                    Rectangle().cornerRadius(6).foregroundColor(viewModel.didSelectMainNet ? Color("AvaRed") : Color("AvaGrayBackground"))
                 )
         }.padding()
     }
@@ -77,7 +77,7 @@ private extension ProfileView {
                 .frame(minWidth: 0, maxWidth: .infinity)
                 .padding(6)
                 .background(
-                    Rectangle().cornerRadius(6).foregroundColor(viewModel.didSelectMainNet ? Color("AvaGray") : Color("AvaRed"))
+                    Rectangle().cornerRadius(6).foregroundColor(viewModel.didSelectMainNet ? Color("AvaGrayBackground") : Color("AvaRed"))
                 )
         }.padding()
     }

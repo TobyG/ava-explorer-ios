@@ -25,8 +25,7 @@ struct TransactionItemView: View {
                     .smallText().foregroundColor(.gray)
                 }
                 
-            }.padding(.top)
-            Divider().padding(.top)
+            }.padding()
         }
         
     }
@@ -37,7 +36,7 @@ private extension TransactionItemView {
         ZStack {
             
             RoundedRectangle(cornerRadius: 6)
-                .fill(address == trans.from_address ? Color("AvaRed") : Color("AvaPurple"))
+                .fill(address == trans.from_address ? Color("AvaRedButton") : Color("AvaPurple"))
                             .frame(width: 30, height: 30)
             Image(systemName: address == trans.from_address ? "arrow.up.right" : "arrow.down.left").foregroundColor(.white).font(.system(size: 15))
         }

@@ -6,30 +6,40 @@
 //
 
 import SwiftUI
+import SwiftUIRefresh
 
 struct TransactionExplorerView: View {
     @ObservedObject var viewModel = TransactionExplorerViewModel()
+    @State private var isShowing = false
     
     var body: some View {
         
         NavigationView{
             VStack {
                 TitleView(title: "Transactions", subtitle: "Avalanche C-Chain")
-                ScrollView {
-                    
-                    LazyVStack {
-                        /*ForEach(0..<viewModel.filteredAddressItems.count, id: \.self) { index in*/
-                        ForEach(0..<viewModel.transactions.count, id: \.self) { index in
-                            TransactionItemView(trans: viewModel.transactions[index], address: viewModel.address)
-                        }
-                    }.padding().padding(.top, 0).background(Color.white).cornerRadius(30)
-                    
-                }
-            }.background(Color("AvaGray"))
+                TransactionList
+            }.background(Color("AvaGrayBackground"))
             .navigationBarHidden(true).edgesIgnoringSafeArea(.top)
             
         }
         
+    }
+}
+
+private extension TransactionExplorerView {
+    var TransactionList : some View {
+        List {
+            ForEach(0..<viewModel.transactions.count, id: \.self) { index in
+                TransactionItemView(trans: viewModel.transactions[index], address: viewModel.address)
+            }.listRowBackground(Color("ListBackground"))
+        }.listStyle(InsetListStyle()).pullToRefresh(isShowing: $isShowing) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.isShowing = false
+                self.viewModel.onRefresh()
+            }
+        }
+        .onChange(of: self.isShowing) { value in
+        }
     }
 }
 

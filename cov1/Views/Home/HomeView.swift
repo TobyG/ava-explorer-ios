@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct HomeView: View {
+    @ObservedObject var viewModel = HomeViewModel()
+
     var body: some View {
         TabView {
             AddressExplorerView()
@@ -30,9 +32,7 @@ struct HomeView: View {
                     Label("Profile", systemImage: "person.circle")
                 }
             
-        }.accentColor(Color("AvaRed")).onAppear() {
-            UITabBar.appearance().barTintColor = .white
-        }.navigationBarBackButtonHidden(true)
+        }.accentColor(Color("AvaRedButton")).navigationBarBackButtonHidden(true).edgesIgnoringSafeArea(.top)
     }
 }
 

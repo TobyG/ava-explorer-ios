@@ -6,30 +6,47 @@
 //
 
 import SwiftUI
+import SwiftUIRefresh
 
 struct NftExplorerView: View {
-    @ObservedObject var viewModel = AddressExplorerViewModel()
+    @ObservedObject var viewModel = NftExplorerViewModel()
+    @State private var isShowing = false
     
     var body: some View {
         VStack {
             
             TitleView(title: "Collectibles", subtitle: "Avalanche C-Chain")
-            ScrollView {
-                NftList
+            if(viewModel.isLoading) {
+                ProgressView()
+                Spacer()
             }
-        }.background(Color("AvaGray")).edgesIgnoringSafeArea(.top)
+            else {
+                NftList
+                Spacer()
+            }
+        }.background(Color("AvaGrayBackground")).navigationBarHidden(true).edgesIgnoringSafeArea(.top)
     }
 }
 
 private extension NftExplorerView {
     
     var NftList: some View {
-        LazyVStack {
-            /*ForEach(0..<viewModel.filteredAddressItems.count, id: \.self) { index in*/
+        
+        List {
+            if(viewModel.nftItems.count == 0) {
+                Text("no NFTs found.")
+            }
             ForEach(0..<viewModel.nftItems.count, id: \.self) { index in
                 NftItemView(addressItem: viewModel.nftItems[index])
+            }.listRowBackground(Color("ListBackground"))
+        }.listStyle(InsetListStyle()).pullToRefresh(isShowing: $isShowing) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.isShowing = false
+                self.viewModel.onRefresh()
             }
-        }.padding().padding(.top, 0).background(Color.white).cornerRadius(30)
+        }
+        .onChange(of: self.isShowing) { value in
+        }
     }
     
 }

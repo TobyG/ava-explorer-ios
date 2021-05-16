@@ -24,13 +24,10 @@ class ToggleElementViewModel: ObservableObject, Identifiable {
         $toggleElement.sink(receiveValue: { value in
             self.id = value.id
             self.state = value.isOn
-            if value.isOn {
-                self.buttonColor = Color("AvaRed")
-                self.textColor = .white
-            } else {
-                self.buttonColor = Color.white
-                self.textColor = Color.gray
-            }
+            
+            self.buttonColor = value.isOn ? Color("AvaRedButton") : Color("AvaGrayBackground")
+            self.textColor = value.isOn ? Color(.white) : Color.gray
+
         }).store(in: &cancellables)
     }
 }

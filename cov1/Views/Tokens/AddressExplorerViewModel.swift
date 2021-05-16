@@ -15,9 +15,9 @@ class AddressExplorerViewModel: ObservableObject {
     @Published var dataRepository: DataRepository = Resolver.resolve()
     @Published var typeFilterViewModels = [ToggleElementViewModel]()
     @Published var filteredAddressItems: [AddressItem] = []
-    @Published var addressItems = [AddressItem]()
+    // @Published var addressItems = [AddressItem]()
     @Published var tokenItems = [AddressItem]()
-    @Published var nftItems = [AddressItem]()
+    // @Published var nftItems = [AddressItem]()
     @Published var isLoading: Bool = false
     
     
@@ -28,33 +28,22 @@ class AddressExplorerViewModel: ObservableObject {
     }
     
     init() {
+        
         dataRepository.$addressBalanceResponse.sink(receiveValue: { value in
             //self.addressItems =
             self.tokenItems = value.data.items
-            self.nftItems = self.tokenItems.filter { $0.nft_data != nil }
+            // self.nftItems = self.tokenItems.filter { $0.nft_data != nil }
             self.filteredAddressItems = self.tokenItems.filter { $0.nft_data == nil}
-            self.onFilter()
+            //self.onFilter()
             
         }).store(in: &cancellables)
         
-        dataRepository.$tokenLoading.sink(receiveValue: {value in
-            self.isLoading = value
-        }).store(in: &cancellables)
-        
+        dataRepository.$tokenLoading.assign(to: \.isLoading, on: self).store(in: &cancellables)
+
         self.typeFilterViewModels = [ToggleElementViewModel(toggleElement: ToggleElement(isOn: true, text: "cryptocurrency")),
                                      ToggleElementViewModel(toggleElement: ToggleElement(isOn: false, text: "stablecoin")),
                                      ToggleElementViewModel(toggleElement: ToggleElement(isOn: false, text: "dust"))]
     }
-    
-    /*
-     func clear() {
-    
-     AddressItemType.allCases.map {
-     ToggleElementViewModel(toggleElement:
-     ToggleElement(isOn: false, text: $0.rawValue)) }
-     self.onFilter()
-     }
-     */
     
     func onFilter() {
         self.filteredAddressItems = tokenItems
@@ -66,7 +55,6 @@ class AddressExplorerViewModel: ObservableObject {
     }
     
     private func containsType(_ type: String) -> Bool {
-        
         let types = self.typeFilterViewModels.filter {
             $0.toggleElement.isOn
         }

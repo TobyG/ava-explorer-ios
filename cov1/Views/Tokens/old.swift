@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftUICharts
 import SwiftUIRefresh
 
-struct AddressExplorerView: View {
+struct new: View {
     
     @ObservedObject var viewModel = AddressExplorerViewModel()
     @State private var isShowing = false
@@ -25,21 +25,15 @@ struct AddressExplorerView: View {
                 }
                 else {
                     TypeFilters.padding(.leading).padding(.top, 2)
-                    
-                    TokenList
-                    
-                    
+                    TokenList.padding(0)
                 }
                 
-            }.background(Color("AvaGrayBackground"))
-            .navigationBarHidden(true).edgesIgnoringSafeArea(.top)
-            
+            }.background(Color("AvaGrayBackground"))/*.edgesIgnoringSafeArea(.top)*/
         }
-        
     }
 }
 
-private extension AddressExplorerView {
+private extension new {
     
     var TypeFilters: some View {
         ScrollView(.horizontal, showsIndicators: false) {
@@ -57,7 +51,7 @@ private extension AddressExplorerView {
             ForEach(0..<viewModel.filteredAddressItems.count, id: \.self) { index in
                 TokenItemView(addressItem: viewModel.filteredAddressItems[index])
                 
-            }.listRowBackground(Color("ListBackground"))
+            }
         }.listStyle(InsetListStyle()).pullToRefresh(isShowing: $isShowing) {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 self.isShowing = false
@@ -70,7 +64,7 @@ private extension AddressExplorerView {
     
 }
 
-struct AddressExplorerView_Previews: PreviewProvider {
+struct new_Previews: PreviewProvider {
     static var previews: some View {
         AddressExplorerView(viewModel: AddressExplorerViewModel())
     }

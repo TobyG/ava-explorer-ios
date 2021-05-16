@@ -17,9 +17,9 @@ struct WelcomeView: View {
             VStack {
                 Image("avax").resizable().frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/).padding(.top, 50)
                 Text("Avalanche").font(Font.custom("Rubik-Regular", size: 30)).foregroundColor(Color("AvaPurple"))
-                Text("C-Chain").smallText().foregroundColor(.gray)
+                Text("C-Chain Information").smallText().foregroundColor(.gray)
                 Text("Welcome!").largeText().foregroundColor(Color("AvaPurple")).padding(.top, 50)
-                Text("Please enter an address:").mediumText().foregroundColor(Color("AvaPurple"))
+                Text("Please enter your C-Chain address:").mediumText().foregroundColor(Color("AvaPurple"))
                 
                 NavigationLink(destination: HomeView(), isActive: $viewModel.alreadyUser) {
                     EmptyView()
@@ -54,7 +54,7 @@ private extension WelcomeView {
                 .frame(minWidth: 0, maxWidth: .infinity)
                 .padding(6)
                 .background(
-                    Rectangle().cornerRadius(6).foregroundColor(validAddress() ? Color("AvaRed") : Color("AvaGray"))
+                    Rectangle().cornerRadius(6).foregroundColor(validAddress() ? Color("AvaRedButton") : Color("AvaGray"))
                 ).padding()
         }.disabled(!validAddress())
     }

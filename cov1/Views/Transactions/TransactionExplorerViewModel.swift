@@ -13,6 +13,7 @@ class TransactionExplorerViewModel: ObservableObject {
     @Published var dataRepository: DataRepository = Resolver.resolve()
     @Published var transactions = [Transaction]()
     @Published var address: String = ""
+    @Published var isLoading: Bool = false
 
     private var cancellables = Set<AnyCancellable>()
     
@@ -23,11 +24,12 @@ class TransactionExplorerViewModel: ObservableObject {
             
         }).store(in: &cancellables)
         
-        dataRepository.$address.sink(receiveValue: { value in
-            self.address = value
-            
-        }).store(in: &cancellables)
-        
+        dataRepository.$transactionsLoading.assign(to: \.isLoading, on: self).store(in: &cancellables)
+        dataRepository.$address.assign(to: \.address, on: self).store(in: &cancellables)
     }
     
+    func onRefresh() {
+        self.dataRepository.loadTransactions()
+        
+    }
 }

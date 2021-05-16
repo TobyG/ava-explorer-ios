@@ -19,7 +19,8 @@ struct TokenItemView: View {
                 TokenImage(url: addressItem.logo_url)
                 
                 VStack(alignment: .leading) {
-                    HStack {
+                    
+                     HStack {
                         Text(addressItem.contract_ticker_symbol)
                             .smallText().foregroundColor(.gray)
                         Spacer()
@@ -27,31 +28,17 @@ struct TokenItemView: View {
                             .smallText()
                             .foregroundColor(.gray)
                     }
+                     
+                    
                     Text(addressItem.contract_name)
                         .mediumTextReg().foregroundColor(Color("AvaPurple"))
-                    Text("\(addressItem.balanceComma)").mediumText().foregroundColor(Color("AvaPurple"))
-                    Text("$\(addressItem.quote)").mediumText().foregroundColor(Color("AvaPurple"))
+                    Text("\(addressItem.balanceComma, specifier: "%.4f")").mediumText().foregroundColor(Color("AvaPurple"))
+                    Text("$\(addressItem.quote, specifier: "%.2f")").mediumText().foregroundColor(Color("AvaPurple"))
 
-                }//.padding(.top, 8).padding(.bottom, 8)
+                }
             }
         }
         
-    }
-    
-    func getColor() -> Color {
-        switch self.addressItem.type {
-        case AddressItemType.cryptocurrency:
-            return Color.blue
-
-        case AddressItemType.stablecoin:
-            return Color.green
-        case AddressItemType.nft:
-            return Color.yellow
-        case AddressItemType.dust:
-            return Color.gray
-        default:
-            return Color.purple
-        }
     }
 }
 

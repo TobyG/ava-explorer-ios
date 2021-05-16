@@ -12,14 +12,15 @@ import NotificationBannerSwift
 
 class DataRepository: ObservableObject {
     @Published var addressItems = [AddressItem]()
-    @Published var addressBalance: AddressBalance = AddressBalance(address: "", updated_at: "", next_update_at: "", quote_currency: "", chain_id: 0, items: [])
+    //@Published var addressBalance: AddressBalance = AddressBalance(address: "", updated_at: "", next_update_at: "", quote_currency: "", chain_id: 0, items: [])
     @Published var addressBalanceResponse: AddressBalanceResponse = AddressBalanceResponse(data: AddressBalance(address: "", updated_at: "", next_update_at: "", quote_currency: "", chain_id: 0, items: []))
     
     @Published var transactionData: TransactionData = TransactionData(address: "", updated_at: "", next_update_at: "", quote_currency: "", chain_id: 0, items: [])
+    
     let defaults = UserDefaults.standard
+    
     @Published var address: String = "" {
         didSet {
-            print("set address")
             self.loadTransactions()
             self.loadTokensAndNfts()
         }
@@ -85,11 +86,8 @@ class DataRepository: ObservableObject {
     
     func getAddress() {
         self.getDidSelectMainNet()
-        print("getting alreadyUser")
         alreadyUser = defaults.bool(forKey: "alreadyUser")
-        print("after getting alreadyUser")
         if(alreadyUser) {
-            print("inside if")
             address = defaults.string(forKey: "address") ?? "click to change address"
             self.loadTokensAndNfts()
             self.loadTransactions()

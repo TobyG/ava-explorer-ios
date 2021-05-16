@@ -21,6 +21,7 @@
 		F62BA039261F2B93007E8AD7 /* TransactionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62BA038261F2B93007E8AD7 /* TransactionData.swift */; };
 		F62BA03E261F3C11007E8AD7 /* TransactionItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62BA03D261F3C11007E8AD7 /* TransactionItemView.swift */; };
 		F62BA046261F459D007E8AD7 /* TransactionExplorerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62BA045261F459D007E8AD7 /* TransactionExplorerViewModel.swift */; };
+		F641A28B2651BB3B006FE028 /* old.swift in Sources */ = {isa = PBXBuildFile; fileRef = F641A28A2651BB3B006FE028 /* old.swift */; };
 		F648C0242639F33000890A42 /* MediumTextRegular.swift in Sources */ = {isa = PBXBuildFile; fileRef = F648C0232639F33000890A42 /* MediumTextRegular.swift */; };
 		F655072B263821FA00EC0BC4 /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F655072A263821F900EC0BC4 /* Rubik-Medium.ttf */; };
 		F655072F263822B400EC0BC4 /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F655072A263821F900EC0BC4 /* Rubik-Medium.ttf */; };
@@ -31,7 +32,6 @@
 		F666DF9E262C9BFE0002E40C /* AddressModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F666DF9D262C9BFE0002E40C /* AddressModalView.swift */; };
 		F666DFA3262CA0390002E40C /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F666DFA2262CA0390002E40C /* ProfileViewModel.swift */; };
 		F666DFA8262CA2880002E40C /* AddressModalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F666DFA7262CA2880002E40C /* AddressModalViewModel.swift */; };
-		F68382AF263F586A000FA342 /* SwiftUIPullToRefresh in Frameworks */ = {isa = PBXBuildFile; productRef = F68382AE263F586A000FA342 /* SwiftUIPullToRefresh */; };
 		F68382B2263F61CF000FA342 /* SwiftUIRefresh in Frameworks */ = {isa = PBXBuildFile; productRef = F68382B1263F61CF000FA342 /* SwiftUIRefresh */; };
 		F68382B4264015FE000FA342 /* DataRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68382B3264015FE000FA342 /* DataRepo.swift */; };
 		F691301926381C9200F8E22D /* Rubik-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F691301726381C4100F8E22D /* Rubik-Light.ttf */; };
@@ -57,7 +57,6 @@
 		F6C08A4E26187C4700EF0312 /* AddressItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C08A4D26187C4700EF0312 /* AddressItem.swift */; };
 		F6C08A5626187D0A00EF0312 /* AddressBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C08A5526187D0A00EF0312 /* AddressBalance.swift */; };
 		F6C08A5B2618899600EF0312 /* TokenItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C08A5A2618899600EF0312 /* TokenItemView.swift */; };
-		F6C08A60261895BE00EF0312 /* DataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C08A5F261895BE00EF0312 /* DataRepository.swift */; };
 		F6C08A6B2618973500EF0312 /* AddressExplorerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C08A6A2618973500EF0312 /* AddressExplorerViewModel.swift */; };
 		F6C08A802618A25E00EF0312 /* AppDelegate+Resolving.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C08A7F2618A25E00EF0312 /* AppDelegate+Resolving.swift */; };
 		F6F03E0F263C80EF003B25E4 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F03E0E263C80EF003B25E4 /* WelcomeView.swift */; };
@@ -105,6 +104,7 @@
 		F62BA038261F2B93007E8AD7 /* TransactionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionData.swift; sourceTree = "<group>"; };
 		F62BA03D261F3C11007E8AD7 /* TransactionItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionItemView.swift; sourceTree = "<group>"; };
 		F62BA045261F459D007E8AD7 /* TransactionExplorerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionExplorerViewModel.swift; sourceTree = "<group>"; };
+		F641A28A2651BB3B006FE028 /* old.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = old.swift; sourceTree = "<group>"; };
 		F648C0232639F33000890A42 /* MediumTextRegular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumTextRegular.swift; sourceTree = "<group>"; };
 		F655072A263821F900EC0BC4 /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
 		F655073F26385B2100EC0BC4 /* LargeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeText.swift; sourceTree = "<group>"; };
@@ -143,7 +143,6 @@
 		F6C08A4D26187C4700EF0312 /* AddressItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressItem.swift; sourceTree = "<group>"; };
 		F6C08A5526187D0A00EF0312 /* AddressBalance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressBalance.swift; sourceTree = "<group>"; };
 		F6C08A5A2618899600EF0312 /* TokenItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenItemView.swift; sourceTree = "<group>"; };
-		F6C08A5F261895BE00EF0312 /* DataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRepository.swift; sourceTree = "<group>"; };
 		F6C08A6A2618973500EF0312 /* AddressExplorerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressExplorerViewModel.swift; sourceTree = "<group>"; };
 		F6C08A7F2618A25E00EF0312 /* AppDelegate+Resolving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Resolving.swift"; sourceTree = "<group>"; };
 		F6F03E0E263C80EF003B25E4 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
@@ -160,7 +159,6 @@
 				F68382B2263F61CF000FA342 /* SwiftUIRefresh in Frameworks */,
 				24CC77724CA1DF2977234EDC /* Pods_cov1.framework in Frameworks */,
 				F6F03E3F263CBC06003B25E4 /* SwiftUICharts in Frameworks */,
-				F68382AF263F586A000FA342 /* SwiftUIPullToRefresh in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,8 +237,8 @@
 			isa = PBXGroup;
 			children = (
 				F62BA01A261DFA01007E8AD7 /* TransactionExplorerView.swift */,
-				F62BA03D261F3C11007E8AD7 /* TransactionItemView.swift */,
 				F62BA045261F459D007E8AD7 /* TransactionExplorerViewModel.swift */,
+				F62BA03D261F3C11007E8AD7 /* TransactionItemView.swift */,
 			);
 			path = Transactions;
 			sourceTree = "<group>";
@@ -378,7 +376,6 @@
 		F6C08A4926187B6600EF0312 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				F6C08A5F261895BE00EF0312 /* DataRepository.swift */,
 				F68382B3264015FE000FA342 /* DataRepo.swift */,
 			);
 			path = Repositories;
@@ -424,6 +421,7 @@
 				F6BAE1E82618A74B00BEC167 /* TokenImage.swift */,
 				F6BAE227261A508D00BEC167 /* ToggleElementView.swift */,
 				F6BAE22C261A50DF00BEC167 /* ToggleElementViewModel.swift */,
+				F641A28A2651BB3B006FE028 /* old.swift */,
 			);
 			path = Tokens;
 			sourceTree = "<group>";
@@ -466,7 +464,6 @@
 			name = cov1;
 			packageProductDependencies = (
 				F6F03E3E263CBC06003B25E4 /* SwiftUICharts */,
-				F68382AE263F586A000FA342 /* SwiftUIPullToRefresh */,
 				F68382B1263F61CF000FA342 /* SwiftUIRefresh */,
 			);
 			productName = cov1;
@@ -545,7 +542,6 @@
 			mainGroup = F6C089F9261878A200EF0312;
 			packageReferences = (
 				F6F03E3D263CBC05003B25E4 /* XCRemoteSwiftPackageReference "ChartView" */,
-				F68382AD263F586A000FA342 /* XCRemoteSwiftPackageReference "SwiftUI-PullToRefresh" */,
 				F68382B0263F61CF000FA342 /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */,
 			);
 			productRefGroup = F6C08A03261878A200EF0312 /* Products */;
@@ -715,12 +711,12 @@
 				F62BA01B261DFA01007E8AD7 /* TransactionExplorerView.swift in Sources */,
 				F6F03E36263C86A0003B25E4 /* HomeView.swift in Sources */,
 				F6BAE242261B1A1800BEC167 /* ListSeparatorStyle.swift in Sources */,
-				F6C08A60261895BE00EF0312 /* DataRepository.swift in Sources */,
 				F6BAE25E261C6E7500BEC167 /* NftData.swift in Sources */,
 				F6BAE237261A54E400BEC167 /* AddressItemType.swift in Sources */,
 				F655074A26385B9100EC0BC4 /* SmallText.swift in Sources */,
 				F655074026385B2100EC0BC4 /* LargeText.swift in Sources */,
 				F62BA032261F2AFC007E8AD7 /* TransactionResponse.swift in Sources */,
+				F641A28B2651BB3B006FE028 /* old.swift in Sources */,
 				F62BA02D261F2AB1007E8AD7 /* Transaction.swift in Sources */,
 				F62BA039261F2B93007E8AD7 /* TransactionData.swift in Sources */,
 				F6C08A6B2618973500EF0312 /* AddressExplorerViewModel.swift in Sources */,
@@ -899,6 +895,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"cov1/Preview Content\"";
 				DEVELOPMENT_TEAM = 8VLD6L9YUL;
 				ENABLE_PREVIEWS = YES;
@@ -908,6 +905,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cov1.cov1;
 				PRODUCT_NAME = Explorer;
 				SWIFT_VERSION = 5.0;
@@ -922,6 +920,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"cov1/Preview Content\"";
 				DEVELOPMENT_TEAM = 8VLD6L9YUL;
 				ENABLE_PREVIEWS = YES;
@@ -931,6 +930,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cov1.cov1;
 				PRODUCT_NAME = Explorer;
 				SWIFT_VERSION = 5.0;
@@ -1064,14 +1064,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		F68382AD263F586A000FA342 /* XCRemoteSwiftPackageReference "SwiftUI-PullToRefresh" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/AppPear/SwiftUI-PullToRefresh";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
 		F68382B0263F61CF000FA342 /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/timbersoftware/SwiftUIRefresh.git";
@@ -1091,11 +1083,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		F68382AE263F586A000FA342 /* SwiftUIPullToRefresh */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F68382AD263F586A000FA342 /* XCRemoteSwiftPackageReference "SwiftUI-PullToRefresh" */;
-			productName = SwiftUIPullToRefresh;
-		};
 		F68382B1263F61CF000FA342 /* SwiftUIRefresh */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F68382B0263F61CF000FA342 /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */;

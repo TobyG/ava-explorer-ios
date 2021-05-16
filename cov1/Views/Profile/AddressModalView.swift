@@ -30,7 +30,7 @@ private extension AddressModalView {
     
     var Address: some View {
         TextField("Title", text: $viewModel.address).mediumText().padding()
-            .background(Color("AvaGray"))
+            .background(Color("AvaGrayBackground"))
             .cornerRadius(6).padding()
     }
     
@@ -45,7 +45,7 @@ private extension AddressModalView {
                 .frame(minWidth: 0, maxWidth: .infinity)
                 .padding(6)
                 .background(
-                    Rectangle().cornerRadius(6).foregroundColor(Color("AvaGray"))
+                    Rectangle().cornerRadius(6).foregroundColor(Color("AvaGrayBackground"))
                 ).padding()
         }
     }
@@ -55,7 +55,7 @@ private extension AddressModalView {
         Button(action: {
             viewModel.updateAddress()
             presentationMode.wrappedValue.dismiss()
-
+            
         }) {
             Text("Save")
                 .mediumText()
